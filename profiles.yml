@@ -1,0 +1,17 @@
+config:
+  send_anonymous_usage_stats: False
+
+default:
+  outputs:
+
+    dev: # User-Password config
+      type: snowflake
+      user: DBT_CLOUD_DEV
+      role: SYSADMIN
+      database: DEMO_DB
+      warehouse: DEMO_WH
+      schema: dbt_your-username-here
+      threads: 1
+      client_session_keep_alive: False
+
+  target: dev
